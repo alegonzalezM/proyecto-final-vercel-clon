@@ -50,7 +50,11 @@ res.status(404).send('Recurso no encontrado o ruta inválida');
 //   app.listen(3000, () => console.log("Servidor local"));
 // }
 
-export default app;
+app.get('/', (req, res) => {
+  res.send('Servidor Express funcionando en Vercel');
+});
+
+export default serverless(app);
 
 
 
