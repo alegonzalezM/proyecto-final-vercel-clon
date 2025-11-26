@@ -3,8 +3,6 @@ import cors from 'cors';
 import productsRouter from "../src/routes/products.routes.js"
 import authRouter from '../src/routes/auth.routes.js'
 import {authentication} from "../src/middleware/authentication.js"
-// import { collection, getDocs } from "firebase/firestore";
-// import { db } from "./src/data/data.js"; // o ../data/data.js según ruta real
 import 'dotenv/config';
 
 const app= express();
@@ -48,9 +46,9 @@ app.use((req, res, next) => {
 res.status(404).send('Recurso no encontrado o ruta inválida');
 });
 
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(3000, () => console.log("Servidor local"));
-}
+// if (process.env.NODE_ENV !== 'production') {
+//   app.listen(3000, () => console.log("Servidor local"));
+// }
 
 export default app;
 
