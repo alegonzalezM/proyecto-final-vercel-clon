@@ -50,11 +50,11 @@ res.status(404).send('Recurso no encontrado o ruta inválida');
 //   app.listen(3000, () => console.log("Servidor local"));
 // }
 
-export default function handler(req, res) {
-  return app(req, res);
-}
+app.get("/", (req, res) => {
+  res.send("Ruta pública: cualquiera puede verla");
+});
 
-
+export default app;
 
 
 
