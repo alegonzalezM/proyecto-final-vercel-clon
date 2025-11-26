@@ -52,4 +52,7 @@ if (process.env.NODE_ENV !== 'production') {
   app.listen(3000, () => console.log("Servidor local"));
 }
 
+export default app;
+
+
 
